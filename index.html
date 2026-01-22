@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Viewer – Internet Archive</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
+      background: #e6dfd1;
+    }
+    header {
+      background: #2b2b2b;
+      color: #fff;
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+    iframe {
+      width: 100%;
+      height: calc(100vh - 44px);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  PDF.js viewer – PDF caricato da Internet Archive
+</header>
+
+<script>
+  const pdfUrl = "https://archive.org/download/adige_final/adige_final.pdf";
+  const viewerUrl =
+    "https://mozilla.github.io/pdf.js/web/viewer.html?file=" +
+    encodeURIComponent(pdfUrl) +
+    "#zoom=page-width";
+
+  document.write(
+    '<iframe src="' + viewerUrl + '"></iframe>'
+  );
+</script>
+
+</body>
+</html>
