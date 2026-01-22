@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Viewer – Internet Archive (PDF.js)</title>
+  <style>
+    body {
+      margin: 0;
+      background: #e6dfd1;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    }
+    #notice {
+      background: #b91c1c;
+      color: white;
+      padding: 12px;
+      font-size: 14px;
+    }
+    iframe {
+      width: 100%;
+      height: calc(100vh - 50px);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="notice">
+  ⚠️ IMPORTANTE: questo viewer funziona SOLO se aperto via HTTP (es. http://localhost).
+  Aprirlo con doppio click (file://) blocca il caricamento del PDF per motivi di sicurezza del browser.
+</div>
+
+<iframe
+  src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://archive.org/download/adige_final/adige_final.pdf#page=1&zoom=page-width">
+</iframe>
+
+</body>
+</html>
